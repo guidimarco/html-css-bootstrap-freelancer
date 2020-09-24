@@ -5,15 +5,11 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
-/* colore barraaaaaaaaaaaaaaaaaa */
-/* .navbar-default {
+/* colore nav-bar */
+.navbar-default {
     background-color: transparent;
     border: none;
-} */
-.navbar-default {
-    background-color: red;
 }
-
 
 /* TOP-NAV */
 /* --- */
@@ -36,6 +32,13 @@ body {
     line-height: 50px;
 }
 
+#top-nav .navbar,
+#top-nav .navbar .container-fluid,
+#top-nav .navbar .container-fluid > .navbar-header {
+    padding: 0;
+    margin: 0;
+}
+
 /* hamburger style */
 .navbar-toggle {
     background-color: #1abc9c;
@@ -47,6 +50,8 @@ body {
     top: 50%;
     transform: translateY(-50%);
 }
+
+
 #top-nav .navbar-toggle .icon-bar {
     width: 20px;
     height: 3px;
@@ -55,18 +60,10 @@ body {
     background-color: white;
     margin: 2px 0;
 }
+/* fine hamburger style */
 
-
-/* #top-nav .container {
-    font-size: 20px;
-    font-weight: 700;
-} */
-
-#top-nav .navbar {
-    /* position: relative; */
-    /* min-height: 50px; */
-    margin-bottom: 0;
-    /* border: 1px solid transparent; */
+#top-nav .navbar-collapse {
+    font-size: 16px;
 }
 
 /* --- */
@@ -85,6 +82,9 @@ body {
     .navbar-collapse.collapse {
         display: none!important;
     }
+    .navbar>.container-fluid .navbar-brand {
+        margin-left: 0;
+    }
 }
 
 @media screen and (min-width: 992px) {
@@ -97,6 +97,10 @@ body {
     }
     .navbar-collapse.collapse {
         display: block!important;
+    }
+
+    .navbar-brand {
+        font-size: 24px;
     }
 
 }
