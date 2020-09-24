@@ -76,12 +76,15 @@ body {
     .navbar-toggle {
         display: block;
     }
+
     .navbar-header {
         float: none;
     }
+
     .navbar-collapse.collapse {
         display: none!important;
     }
+
     .navbar>.container-fluid .navbar-brand {
         margin-left: 0;
     }
@@ -89,12 +92,18 @@ body {
 
 @media screen and (min-width: 992px) {
     /* NAV-TOP */
+    #top-nav {
+        padding: 24px;
+    }
+
     .navbar-toggle {
         display: none;
     }
+
     .navbar-header {
         float: left;
     }
+
     .navbar-collapse.collapse {
         display: block!important;
     }
