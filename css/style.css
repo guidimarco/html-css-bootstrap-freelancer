@@ -5,11 +5,7 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
-/* colore nav-bar */
-.navbar-default {
-    background-color: transparent;
-    border: none;
-}
+
 
 /* TOP-NAV */
 /* --- */
@@ -21,10 +17,14 @@ body {
     padding: 16px;
 }
 
-#top-nav .navbar-default .navbar-nav > li > a,
-#top-nav .navbar-default .navbar-brand,
-#top-nav .navbar {
+#top-nav.navbar-default .navbar-nav > li > a,
+#top-nav.navbar-default .navbar-brand,
+#top-nav.navbar {
     color: white;
+}
+
+#top-nav .navbar-header {
+    position: relative;
 }
 
 #top-nav .navbar-brand {
@@ -32,14 +32,17 @@ body {
     line-height: 50px;
 }
 
-#top-nav .navbar,
-#top-nav .navbar .container-fluid,
-#top-nav .navbar .container-fluid > .navbar-header {
+#top-nav.navbar .container,
+#top-nav.navbar .container > .navbar-header {
     padding: 0;
-    margin: 0;
+    margin: 0 auto;
 }
 
 /* hamburger style */
+.navbar-default .navbar-toggle {
+    border: 2px solid #1abc9c;
+}
+
 .navbar-toggle {
     background-color: #1abc9c;
     border: 2px solid #1abc9c;
@@ -51,12 +54,12 @@ body {
     transform: translateY(-50%);
 }
 
-
 #top-nav .navbar-toggle .icon-bar {
     width: 20px;
     height: 3px;
 }
-#top-nav .navbar-default .navbar-toggle .icon-bar {
+
+#top-nav.navbar-default .navbar-toggle .icon-bar {
     background-color: white;
     margin: 2px 0;
 }
@@ -71,7 +74,20 @@ body {
 /* MEDIA QUERY */
 /* --- */
 /* --- */
+@media screen and (min-width: 576px) {
+    /* aggiunta dimensione container */
+    .container-sm, .container {
+        max-width: 540px;
+    }
+
+}
+
 @media screen and (min-width: 768px) {
+    /* ALL DOC */
+    .container {
+        max-width: 720px;
+    }
+
     /* NAV-TOP */
     .navbar-toggle {
         display: block;
@@ -85,15 +101,17 @@ body {
         display: none!important;
     }
 
-    .navbar>.container-fluid .navbar-brand {
-        margin-left: 0;
-    }
 }
 
 @media screen and (min-width: 992px) {
+    /* ALL DOC */
+    .container {
+        max-width: 960px;
+    }
+
     /* NAV-TOP */
     #top-nav {
-        padding: 24px;
+        padding: 24px 16px;
     }
 
     .navbar-toggle {
@@ -109,7 +127,14 @@ body {
     }
 
     .navbar-brand {
-        font-size: 24px;
+        font-size: 28px;
     }
 
+}
+
+@media screen and (min-width: 1140px) {
+    /* ALL DOC */
+    .container {
+        max-width: 1140px;
+    }
 }
