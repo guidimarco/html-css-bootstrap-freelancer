@@ -40,6 +40,33 @@ button.primary {
     border-radius: 8px;
 }
 
+#contact button.primary {
+    font-size: 20px;
+    padding: 16px 28px;
+}
+
+#top-nav button.primary:hover,
+#contact button.primary:hover {
+    color: white;
+    background-color: #148f77;
+    border-color: #148f77;
+}
+
+/* button download */
+button.download {
+    background-color: transparent;
+    font-size: 20px;
+    border: 2px solid #f8f9fa;
+    border-radius: 8px;
+    padding: 16px 28px;
+    transition: all 0.3s;
+}
+
+button.download:hover {
+    color: #212529;
+    background-color: #f8f9fa;
+}
+
 /* classe secondary */
 .secondary {
     background-color: white;
@@ -71,6 +98,32 @@ button.primary {
     background-color: white;
     border-radius: 2px;
     vertical-align: middle;
+}
+
+/* form style */
+.form-control {
+    font-size: 24px;
+    border: none;
+    border-bottom: 1px solid #e9ecef;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0 0 8px;
+    height: 90px;
+}
+
+textarea.form-control {
+    height: 400px;
+}
+
+.form-control::placeholder {
+    color: #6c757d;
+    font-size: 24px;
+    opacity: 1;
+}
+
+.form-control:focus {
+    border-color: #e9ecef;
+    box-shadow: none;
 }
 
 /* TOP-NAV */
@@ -112,11 +165,6 @@ button.primary {
 #top-nav button {
     text-transform: uppercase;
     border-color: #1abc9c;
-}
-
-#top-nav button.primary:hover {
-    background-color: #148f77;
-    border-color: #148f77;
 }
 
 .navbar-toggle {
@@ -172,6 +220,7 @@ main {
 .overlay {
     background-color: rgba(26, 188, 156, 0.9);
     opacity: 0;
+    color: white;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -179,6 +228,17 @@ main {
     right: 0;
     border-radius: 6px;
     transition: all 0.5s;
+}
+
+.overlay::after {
+    content: "\f067";
+    font-family: "Font Awesome 5 Free";
+    font-weight: bold;
+    font-size: 5em;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .overlay:hover {
