@@ -210,7 +210,8 @@ main {
 /* SECTION PORTFOLIO */
 /* --- */
 #portfolio {
-    padding: inherit 24px;
+    padding-left: 24px;
+    padding-right: 24px;
 }
 
 .img-container {
